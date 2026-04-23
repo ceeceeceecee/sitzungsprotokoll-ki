@@ -1,0 +1,37 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: sitzungsprotokoll-ki
+    restart: unless-stopped
+    ports:
+      - "8501:8501"
+    environment:
+      - WHISPER_MODEL=${WHISPER_MODEL:-small}
+      - WHISPER_DEVICE=${WHISPER_DEVICE:-cpu}
+      - OLLAMA_BASE_URL=${OLLAMA_BASE_URL:-http://ollama:11434}
+      - OLLAMA_MODEL=${OLLAMA_MODEL:-llama3}
+      - OPENAI_API_KEY=${OPENAI_API_KEY:-}
+      - TZ=${TZ:-Europe/Berlin}
+    volumes:
+      - app_data:/app/data
+      - whisper_models:/root/.cache/huggingface/hub
+    networks:
+      - internal
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8501/_stcore/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+networks:
+  internal:
+    driver: bridge
+    internal: true
+
+volumes:
+  app_data:
+  whisper_models:

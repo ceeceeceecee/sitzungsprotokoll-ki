@@ -1,0 +1,56 @@
+# Beschlusserkennung – Muster für die automatische Extraktion
+
+## Erkennungsmuster
+
+Die folgenden Muster werden verwendet, um Beschlüsse in Transkripten zu erkennen:
+
+### Direkte Beschlussformulierungen
+- "Es wird beschlossen, dass..."
+- "Der Gemeinderat beschließt..."
+- "Der Ausschuss stimmt dem Antrag zu"
+- "Der Rat nimmt den Beschluss an"
+- "Es wurde beschlossen..."
+- "Beschlossen wurde..."
+- "Dem Antrag wird stattgegeben"
+- "Der Antrag wird abgelehnt"
+
+### Indirekte Beschlussformulierungen
+- "Wir stimmen dafür"
+- "Dagegen"
+- "Enthaltung"
+- "Keine Einwände"
+- "So wird es gemacht"
+- "Damit ist das beschlossen"
+
+## Ausgabeformat
+
+```json
+{
+  "beschluesse": [
+    {
+      "nummer": "B-2024-001",
+      "text": "Wortlaut des Beschlusses",
+      "abstimmung": "Einstimmig",
+      "datum": "2024-01-15",
+      "top_referenz": "TOP 3"
+    }
+  ]
+}
+```
+
+## Abstimmungsergebnisse
+
+| Ergebnis | Muster |
+|----------|--------|
+| Einstimmig | "Einstimmig", "ohne Gegenstimme", "einmütig" |
+| Mehrheit | "Mehrheit", "mit Mehrheit", "mehrheitlich" |
+| Ablehnung | "Abgelehnt", "Gegenstimmen mehrheitlich" |
+| Enthaltung | "Mit Enthaltung", "bei Enthaltung von" |
+| geteilt | "Geteilt", "knappe Mehrheit" |
+
+## Beschlussnummern
+
+Beschlussnummern werden automatisch generiert:
+- Format: `B-JJJJ-NNN`
+- Beispiel: `B-2024-001`, `B-2024-002`
+- Laufende Nummer pro Jahr

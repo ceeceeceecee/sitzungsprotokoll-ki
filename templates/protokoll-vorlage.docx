@@ -1,0 +1,58 @@
+# Protokoll-Vorlage – DOCX Struktur
+
+## Beschreibung
+
+Diese Datei beschreibt die Struktur der automatisch generierten DOCX-Protokolle.
+Die eigentliche Vorlage wird zur Laufzeit von `processor/document_exporter.py` erstellt.
+
+## Layout
+
+### Kopfzeile
+- Wappen der Kommune (optional, zentriert, max. 150px Breite)
+- Behördenname (fett, zentriert, 18pt)
+
+### Titel
+- "Sitzungsprotokoll [Gremium] – Sitzung Nr. [Nr.]"
+- Zentriert, H1-Überschrift
+- Unterstrichen
+
+### Metadaten
+- Datum | Beginn | Ort (zentriert, grau)
+- Anwesende (falls bekannt)
+
+### Trennlinie
+- Horizontale Linie
+
+### Tagesordnungspunkte
+- Für jeden TOP:
+  - Überschrift: "TOP [Nr.] – [Titel]" (H3)
+  - Inhalt: Zusammenfassung der Diskussion
+  - Hintergrund: Hellgrau, blauer Rand links
+
+### Beschlüsse
+- Überschrift: "Beschlüsse" (H2)
+- Für jeden Beschluss:
+  - "Beschluss [Nr.]: [Text]" (fett)
+  - Abstimmungsergebnis (kursiv)
+  - Hintergrund: Hellgrün, grüner Rand links
+
+### Zusammenfassung
+- Überschrift: "Zusammenfassung" (H2)
+- Max. 3 Sätze
+
+### Unterschriften
+- Zwei Spalten: Protokollführer/in | Vorsitzende/r
+- Unten: Leerzeichen für Unterschrift
+
+### Fußzeile
+- "Automatisch generiert am [Datum] mit Sitzungsprotokoll-KI"
+- Zentriert, 8pt, grau
+
+## Seitenränder
+- Alle Seiten: 2,5 cm
+
+## Schriftarten
+- Arial oder Helvetica
+- Titel: 14-18pt
+- Fließtext: 11pt
+- Fußzeile: 8pt

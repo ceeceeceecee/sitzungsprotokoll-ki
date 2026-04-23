@@ -1,0 +1,44 @@
+# Sprecherzuweisung – Identifikation von Rednern im Transkript
+
+## Methode
+
+Die Sprechererkennung erfolgt auf zwei Ebenen:
+
+### 1. Automatische Sprechererkennung (pyannote.audio)
+- Audio-basierte Diarisierung
+- Erkennt verschiedene Stimmen im Audio
+- Ordnet Segmente Sprechern zu (Sprecher 1, Sprecher 2, etc.)
+
+### 2. Kontextbasierte Zuweisung (KI)
+- Bekannte Sprecher werden anhand des Kontexts zugeordnet
+- Rollen und Funktionen werden erkannt (Vorsitzende/r, Bürgermeister/in)
+- Anreden im Text helfen bei der Zuordnung
+
+## Bekannte Sprecher
+
+Wenn eine Liste bekannter Sprecher bereitgestellt wird, werden diese in der Reihenfolge ihrer ersten Erwähnung den erkannten Stimmen zugeordnet.
+
+### Beispiel
+Sprecher-Liste: ["Bürgermeister Müller", "Stadtrat Schmidt", "Fraktionsvorsitzende Weber"]
+
+Die erste erkannte Stimme wird "Bürgermeister Müller" zugeordnet, die zweite "Stadtrat Schmidt", etc.
+
+## Kontext-Muster
+
+### Vorsitzende/r erkennen
+- "Ich eröffne die Sitzung"
+- "Wir kommen zu TOP"
+- "Das Wort hat"
+- "Die Abstimmung wird durchgeführt"
+- "Die Sitzung ist geschlossen"
+
+### Ratsmitglieder erkennen
+- "Ich beantrage"
+- "Mein Antrag lautet"
+- "Ich spreche mich dagegen aus"
+- "Ich stimme zu"
+
+### Bürger/innen erkennen
+- "Als Bürger möchte ich"
+- "Ich wende mich an den Rat"
+- "Ich bitte um"
