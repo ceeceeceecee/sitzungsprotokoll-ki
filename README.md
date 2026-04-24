@@ -67,6 +67,41 @@
 
 ---
 
+## 🚀 Schnellstart
+
+### Voraussetzungen
+
+| Komponente | Minimum | Empfohlen | Zweck |
+|---|---|---|---|
+| Python | 3.10+ | 3.11 | Streamlit & Transkription |
+| RAM | 8 GB | 16 GB | Whisper-Modell |
+| Docker | 20.10+ | 24.0+ | Container-Deployment |
+| GPU | — | NVIDIA 4+ GB VRAM | Beschleunigte Transkription |
+| Festplatte | 5 GB | 10 GB | Whisper-Modellgewichte |
+
+### Installation
+
+```bash
+git clone https://github.com/ceeceeceecee/sitzungsprotokoll-ki.git
+cd sitzungsprotokoll-ki
+
+# Mit Docker (empfohlen)
+docker compose up -d
+
+# Oder lokal
+pip install -r requirements.txt
+streamlit run app.py
+```
+
+### Erste Schritte
+
+1. **Web-UI öffnen** — Docker: `http://localhost:8501`, lokal: `streamlit run app.py`
+2. **Audio-Datei hochladen** — MP3, WAV oder M4A
+3. **Transkription starten** — Whisper analysiert automatisch, Sprecher werden erkannt
+4. **Protokoll exportieren** — DOCX, PDF oder HTML im Behördenstil
+
+---
+
 ## 💻 Systemanforderungen
 
 | Komponente | Minimum | Empfohlen |
