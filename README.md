@@ -216,14 +216,15 @@ Beiträge sind willkommen! Bitte beachten Sie:
 
 ---
 
+
+## 👤 Autor
+
+**Cela** — Freelancer für digitale Verwaltungslösungen
 ## 📄 Lizenz
 
 Dieses Projekt steht unter der [MIT-Lizenz](LICENSE).
 
 ---
 
-## 👤 Autor
-
-**Cela** — Freelancer für digitale Verwaltungslösungen
 
 [GitHub](https://github.com/ceeceeceecee)
