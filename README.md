@@ -195,11 +195,12 @@ streamlit run app.py
 - [x] Sprechererkennung (pyannote.audio)
 - [x] Beschluss- und Abstimmungserkennung
 - [x] Docker-Deployment (Offline-fähig)
-- [ ] Batch-Verarbeitung mehrerer Audio-Dateien
+- [x] Batch-Verarbeitung mehrerer Audio-Dateien
+- [x] Historien-Suche über vergangene Protokolle (Volltext, FTS5)
+- [x] Wiedervorlage und Aufgabenverfolgung
+- [x] Automatische Aufgabenextraktion aus Beschlüssen
 - [ ] Integration mit Behörden-Software (z.B. Fabasoft)
 - [ ] Automatische Verteilung an Ratsmitglieder
-- [ ] Historien-Suche über vergangene Protokolle
-- [ ] Wiedervorlage und Aufgabenverfolgung
 
 ---
 
