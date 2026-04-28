@@ -10,6 +10,11 @@ import tempfile
 from datetime import datetime
 from pathlib import Path
 
+# -- Unified Theme System --
+import sys, os as _theme_os
+sys.path.insert(0, _theme_os.path.dirname(_theme_os.path.abspath(__file__)))
+from theme import init_theme, theme_toggle_sidebar, app_footer
+
 from processor.transcriber import AudioTranscriber
 from processor.protocol_generator import ProtocolGenerator
 from processor.document_exporter import DocumentExporter
@@ -24,6 +29,8 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="expanded"
 )
+
+init_theme()
 
 # Benutzerdefiniertes CSS
 st.markdown("""
@@ -585,3 +592,9 @@ with tab_aufgaben:
                 if st.button("Loeschen", key=f"del_{task['id']}"):
                     tracker.update_task(task["id"], status="erledigt")
                     st.rerun()
+
+# -- Theme Toggle --
+theme_toggle_sidebar()
+
+# -- Footer --
+app_footer()

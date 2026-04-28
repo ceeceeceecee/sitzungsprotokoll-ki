@@ -1,7 +1,6 @@
 # Sitzungsprotokoll Ki
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/ceeceeceecee/ai-document-analyzer/main/docs/coletrading-banner.svg" alt="ColeTrading" width="600">
 </p>
 
 ![DSGVO](https://img.shields.io/badge/DSGVO-Konform-brightgreen) ![Offline](https://img.shields.io/badge/Offline-100%-success) ![Self-Hosted](https://img.shields.io/badge/Self-Hosted-100%-blue) ![Docker](https://img.shields.io/badge/Docker-Ready-2496ED?logo=docker) ![Python](https://img.shields.io/badge/Python-3.10+-3776AB?logo=python)
@@ -67,5 +66,4 @@ Beiträge sind willkommen! Bitte erstelle einen Issue oder Pull Request.
 MIT License — siehe [LICENSE](LICENSE).
 
 <p align="center">
-<a href="https://github.com/ceeceeceecee">ColeTrading</a> &bull; DSGVO-konform &bull; Self-Hosted &bull; Open Source
 </p>
