@@ -49,7 +49,6 @@ streamlit run app.py
 
 **Sprecher-Erkennung**
 
-<img src="screenshots/speaker-detection.png" alt="Sprecher-Erkennung" width="800">
 
 **Export-Optionen**
 
