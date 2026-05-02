@@ -1,49 +1,9 @@
-# Dependencies
-__pycache__/
-*.py[cod]
-*$py.class
-*.egg-info/
-dist/
-build/
-.eggs/
-
-# Virtual Environment
-venv/
-.venv/
-env/
-
-# Environment Variables
-.env
-.env.local
-.env.production
-
-# IDE
-.vscode/
-.idea/
-
-# OS
-.DS_Store
-Thumbs.db
-
-# Data
+database/
+processor/
+config/
 data/
-*.mp3
-*.mp4
-*.wav
-*.m4a
-*.ogg
-*.flac
-
-# Whisper Models
-models/
-
-# Output
-output/
-exports/
-
-# Logs
-*.log
-logs/
-
-# Credentials
-credentials.json
+__pycache__/
+*.pyc
+.DS_Store
+*.db
+.env
