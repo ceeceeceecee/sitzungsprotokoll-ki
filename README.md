@@ -9,13 +9,13 @@
 
 ## Overview
 
-Automatisiert die Erstellung professioneller Sitzungsprotokolle. Nutzt Whisper für Transkription und Claude/KI für Protokoll-Generierung. 100% offline-fähig, DSGVO-konform.
+Automatisiert die Erstellung professioneller Sitzungsprotokolle. Nutzt Whisper für Transkription und Ollama für KI-gestützte Protokoll-Generierung. 100% offline-fähig, DSGVO-konform.
 
 ## Features
 
 - Whisper-Transkription
 - Sprecher-Erkennung
-- KI-gestützte Protokoll-Generierung
+- KI-gestützte Protokoll-Generierung (lokal via Ollama)
 - Export als PDF, DOCX, Markdown
 - 100% offline-fähig
 - Streamlit Web-Interface
@@ -27,7 +27,7 @@ Automatisiert die Erstellung professioneller Sitzungsprotokolle. Nutzt Whisper f
 | Python 3.10+ | Backend |
 | Streamlit | Web-Interface |
 | Whisper | Transkription |
-| Claude AI | Protokoll-Generierung |
+| Ollama | KI-Protokoll-Generierung |
 | Docker | Deployment |
 
 ## Quick Start
