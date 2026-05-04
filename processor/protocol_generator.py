@@ -24,7 +24,7 @@ class ProtocolGenerator:
         """
         self.ai_provider = ai_provider
         self.base_url = os.environ.get(
-            "OLLAMA_BASE_URL", "http://localhost:11434"
+            "OLLAMA_BASE_URL", os.getenv("OLLAMA_HOST", "http://localhost:11434")
         )
         self.model = os.environ.get(
             "OLLAMA_MODEL", "llama3"
